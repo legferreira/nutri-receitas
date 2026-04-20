@@ -1,0 +1,14 @@
+.badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 500;
+  padding: 2px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.verde     { background: var(--verde-suave);     color: var(--verde); }
+.terracota { background: var(--terracota-suave); color: var(--terracota); }
+.gray      { background: #f0f0ee; color: #666; }
+.yellow    { background: #fff3cd; color: #856404; }
+.red       { background: #fee;    color: #c33; }

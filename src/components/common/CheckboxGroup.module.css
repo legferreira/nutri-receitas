@@ -1,0 +1,14 @@
+.wrapper { display: flex; flex-direction: column; gap: 0.5rem; }
+.label { font-size: 0.75rem; font-weight: 500; color: var(--texto-medio); text-transform: uppercase; letter-spacing: 0.4px; }
+.group { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tag {
+  padding: 0.3rem 0.85rem;
+  border-radius: 20px;
+  border: 1px solid var(--borda);
+  background: var(--branco);
+  color: var(--texto-medio);
+  font-size: 0.8rem;
+  transition: var(--transition);
+}
+.tag:hover { border-color: var(--verde); color: var(--verde); }
+.active { background: var(--verde-suave); border-color: var(--verde); color: var(--verde); font-weight: 500; }

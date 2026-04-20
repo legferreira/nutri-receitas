@@ -1,0 +1,10 @@
+.titulo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--verde); margin-bottom: .2rem; }
+.sub { font-size: .85rem; color: var(--texto-claro); margin-bottom: 1.75rem; }
+.tableCard { background: var(--branco); border: 1px solid var(--borda); border-radius: var(--radius-md); overflow: hidden; }
+.tableHeader { padding: .9rem 1.25rem; border-bottom: 1px solid var(--borda); display: flex; align-items: center; justify-content: space-between; gap: .75rem; flex-wrap: wrap; }
+.filtros { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; flex: 1; }
+.searchWrap { position: relative; display: flex; align-items: center; gap: .4rem; background: var(--creme); border: 1px solid var(--borda); border-radius: 20px; padding: .35rem .75rem; min-width: 200px; font-size: .82rem; }
+.searchInput { border: none; background: transparent; outline: none; font-family: 'DM Sans', sans-serif; font-size: .82rem; color: var(--texto); width: 100%; }
+.select { padding: .38rem .7rem; border: 1px solid var(--borda); border-radius: 20px; font-size: .82rem; font-family: 'DM Sans', sans-serif; color: var(--texto); background: var(--creme); outline: none; }
+.select:focus { border-color: var(--verde); }
+.count { padding: .45rem 1.25rem; background: var(--creme); border-bottom: 1px solid var(--borda); font-size: .78rem; color: var(--texto-claro); }

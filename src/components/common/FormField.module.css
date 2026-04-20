@@ -1,0 +1,30 @@
+.group { display: flex; flex-direction: column; gap: 0.35rem; }
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--texto-medio);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.input {
+  padding: 0.55rem 0.85rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  color: var(--texto);
+  background: var(--creme);
+  outline: none;
+  transition: border 0.2s, background 0.2s;
+  width: 100%;
+}
+
+.input:focus  { border-color: var(--verde); background: var(--branco); }
+.inputError   { border-color: #e74c3c !important; }
+.textarea     { resize: vertical; min-height: 75px; }
+
+.error {
+  font-size: 0.75rem;
+  color: #e74c3c;
+}

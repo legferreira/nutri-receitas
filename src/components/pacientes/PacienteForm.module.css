@@ -1,0 +1,9 @@
+.form { display: flex; flex-direction: column; gap: .9rem; }
+.sectionTitle { font-size: .75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--verde); font-weight: 500; padding-bottom: .4rem; border-bottom: 1px solid var(--borda); margin-top: .5rem; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.row3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+.imcBox { display: flex; flex-direction: column; justify-content: flex-end; padding: .55rem .85rem; border: 1px solid var(--borda); border-radius: var(--radius-sm); background: var(--creme); gap: .2rem; }
+.imcLabel { font-size: .68rem; text-transform: uppercase; letter-spacing: .4px; color: var(--texto-claro); }
+.imcValue { font-size: 1.1rem; font-weight: 500; color: var(--verde); }
+.actions { display: flex; gap: .75rem; margin-top: .75rem; padding-top: 1rem; border-top: 1px solid var(--borda); }
+@media (max-width: 600px) { .row2, .row3 { grid-template-columns: 1fr; } }

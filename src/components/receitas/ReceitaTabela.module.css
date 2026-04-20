@@ -1,0 +1,17 @@
+.tableWrap { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; }
+.table thead th {
+  padding: .7rem 1rem; text-align: left;
+  font-size: .72rem; font-weight: 500; color: var(--texto-claro);
+  text-transform: uppercase; letter-spacing: .5px;
+  background: var(--creme); border-bottom: 1px solid var(--borda);
+  white-space: nowrap;
+}
+.table tbody td { padding: .8rem 1rem; font-size: .85rem; border-bottom: 1px solid var(--borda); vertical-align: middle; }
+.table tbody tr:last-child td { border-bottom: none; }
+.table tbody tr:hover { background: var(--creme); }
+.nome { font-weight: 500; max-width: 200px; }
+.macros { font-size: .78rem; color: var(--texto-medio); }
+.tagsCell { display: flex; gap: .25rem; flex-wrap: wrap; align-items: center; }
+.more { font-size: .72rem; color: var(--texto-claro); }
+.acoes { display: flex; gap: .35rem; }

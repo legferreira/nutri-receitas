@@ -1,0 +1,38 @@
+.container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 1000;
+}
+
+.toast {
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  font-weight: 500;
+  animation: slideUp 0.3s ease;
+  max-width: 320px;
+}
+
+.success {
+  background: var(--verde);
+  color: white;
+}
+
+.error {
+  background: #c0392b;
+  color: white;
+}
+
+.warning {
+  background: var(--terracota);
+  color: white;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

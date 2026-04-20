@@ -1,0 +1,39 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* sizes */
+.sm { padding: 0.3rem 0.75rem; font-size: 0.78rem; }
+.md { padding: 0.55rem 1.2rem;  font-size: 0.88rem; }
+.lg { padding: 0.75rem 1.8rem;  font-size: 1rem; }
+
+/* variants */
+.primary   { background: var(--verde);     color: white; }
+.primary:hover:not(:disabled)   { background: var(--verde-medio); }
+
+.secondary { background: transparent; color: var(--texto-medio); border: 1px solid var(--borda); }
+.secondary:hover:not(:disabled) { background: var(--creme-escuro); }
+
+.danger    { background: transparent; color: #c0392b; border: 1px solid #f5c6c6; }
+.danger:hover:not(:disabled)    { background: #fee; }
+
+.terracota { background: var(--terracota); color: white; }
+.terracota:hover:not(:disabled) { background: #a85f31; }
+
+.ghost     { background: transparent; color: var(--verde); border: 1px solid var(--verde-claro); }
+.ghost:hover:not(:disabled)     { background: var(--verde-suave); }
+
+.pill { border-radius: 20px; }

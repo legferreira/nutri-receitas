@@ -1,0 +1,30 @@
+.header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+.avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--verde-suave); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 600; color: var(--verde); flex-shrink: 0; }
+.nome { font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: .25rem; }
+
+.tabs { display: flex; border-bottom: 1px solid var(--borda); margin-bottom: 1.25rem; gap: .1rem; }
+.tab { padding: .55rem 1.1rem; font-size: .85rem; color: var(--texto-claro); border: none; border-bottom: 2px solid transparent; background: none; font-family: 'DM Sans', sans-serif; transition: var(--transition); cursor: pointer; }
+.tab:hover { color: var(--verde); }
+.tabActive { color: var(--verde) !important; border-bottom-color: var(--verde) !important; font-weight: 500; }
+
+.infoGrid { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem 1.5rem; }
+.infoItem { display: flex; flex-direction: column; gap: 2px; }
+.infoLabel { font-size: .72rem; text-transform: uppercase; letter-spacing: .5px; color: var(--texto-claro); }
+.infoVal   { font-size: .9rem; color: var(--texto); }
+
+.historicoList { display: flex; flex-direction: column; gap: .5rem; margin-bottom: 1rem; }
+.historicoItem { display: flex; align-items: center; justify-content: space-between; padding: .65rem .9rem; border-radius: var(--radius-md); border: 1px solid var(--borda); background: var(--creme); }
+.historicoData { font-size: .78rem; color: var(--texto-claro); }
+.historicoObs  { font-size: .78rem; color: var(--texto-medio); }
+.historicoRight { text-align: right; }
+.historicoPeso { display: block; font-size: 1rem; font-weight: 500; color: var(--verde); }
+.deltaNeg { font-size: .75rem; font-weight: 500; color: #2d8a4e; }
+.deltaPos { font-size: .75rem; font-weight: 500; color: #c44; }
+
+.addPeso { background: var(--creme); border-radius: var(--radius-md); padding: 1rem; display: flex; flex-direction: column; gap: .6rem; }
+.addPesoTitle { font-size: .75rem; font-weight: 500; color: var(--texto-medio); text-transform: uppercase; letter-spacing: .3px; }
+.addPesoRow { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+
+.restricoes { display: flex; flex-wrap: wrap; gap: .4rem; }
+.obs { width: 100%; margin-top: .75rem; font-size: .88rem; color: var(--texto-medio); }
+.empty { font-size: .88rem; color: var(--texto-claro); padding: .5rem 0; }

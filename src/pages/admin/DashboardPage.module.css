@@ -1,0 +1,16 @@
+.titulo { font-family:'Playfair Display',serif; font-size:1.5rem; color:var(--verde); margin-bottom:.2rem; }
+.sub { font-size:.85rem; color:var(--texto-claro); margin-bottom:1.75rem; }
+.statsGrid { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin-bottom:2rem; }
+.statCard { background:var(--branco); border:1px solid var(--borda); border-radius:var(--radius-md); padding:1.25rem; }
+.statLabel { font-size:.75rem; color:var(--texto-claro); margin-bottom:.4rem; }
+.statValue { font-size:1.75rem; font-weight:500; color:var(--texto); line-height:1; }
+.statChange { font-size:.73rem; color:var(--verde-medio); margin-top:.3rem; }
+.tableCard { background:var(--branco); border:1px solid var(--borda); border-radius:var(--radius-md); overflow:hidden; margin-bottom:1.5rem; }
+.tableHeader { padding:.9rem 1.25rem; border-bottom:1px solid var(--borda); }
+.tableTitle { font-weight:500; font-size:.9rem; }
+.table { width:100%; border-collapse:collapse; }
+.table thead th { padding:.7rem 1rem; text-align:left; font-size:.72rem; font-weight:500; color:var(--texto-claro); text-transform:uppercase; letter-spacing:.5px; background:var(--creme); border-bottom:1px solid var(--borda); }
+.table tbody td { padding:.8rem 1rem; font-size:.85rem; color:var(--texto); border-bottom:1px solid var(--borda); }
+.table tbody tr:last-child td { border-bottom:none; }
+.table tbody tr:hover { background:var(--creme); }
+@media (max-width:768px) { .statsGrid { grid-template-columns:1fr 1fr; } }
