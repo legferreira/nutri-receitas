@@ -3,8 +3,13 @@ import api from './api';
 const ENDPOINT = '/receitas';
 
 const receitaService = {
+  /** Lista todas as receitas (área admin) */
   listar: (params = {}) =>
     api.get(ENDPOINT, { params }).then((res) => res.data),
+
+  /** Lista apenas receitas publicadas (área pública) */
+  listarPublicas: (params = {}) =>
+    api.get(`${ENDPOINT}/publicas`, { params }).then((res) => res.data),
 
   buscarPorId: (id) =>
     api.get(`${ENDPOINT}/${id}`).then((res) => res.data),
@@ -17,9 +22,6 @@ const receitaService = {
 
   excluir: (id) =>
     api.delete(`${ENDPOINT}/${id}`).then((res) => res.data),
-
-  listarPublicas: (params = {}) =>
-    api.get(`${ENDPOINT}/publicas`, { params }).then((res) => res.data),
 };
 
 export default receitaService;

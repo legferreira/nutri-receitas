@@ -24,9 +24,9 @@ export default function ReceitaCard({ receita, onClick }) {
         <h3 className={styles.nome}>{receita.nome}</h3>
 
         <div className={styles.meta}>
-          <span>⏱ {receita.tempoPreparo}min</span>
-          <span>🔥 {receita.calorias}kcal</span>
-          <span>🍽 {receita.rendimentoPorcoes} porç.</span>
+          {receita.tempoPreparo      && <span>⏱ {receita.tempoPreparo}min</span>}
+          {receita.calorias          && <span>🔥 {receita.calorias}kcal</span>}
+          {receita.rendimentoPorcoes && <span>🍽 {receita.rendimentoPorcoes} porç.</span>}
         </div>
 
         {receita.tagsDieteticas?.length > 0 && (

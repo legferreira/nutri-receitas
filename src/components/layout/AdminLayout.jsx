@@ -3,13 +3,11 @@ import styles from './AdminLayout.module.css';
 
 const navItems = [
   { section: 'Visão geral' },
-  { to: '/admin',           label: 'Dashboard',      icon: '📊', end: true },
+  { to: '/admin',              label: 'Dashboard',        icon: '📊', end: true },
   { section: 'Receitas' },
-  { to: '/admin/receitas',       label: 'Listar Receitas', icon: '🥗' },
-  { to: '/admin/receitas/nova',  label: 'Nova Receita',    icon: '✚' },
+  { to: '/admin/receitas',     label: 'Listar Receitas',  icon: '🥗' },
   { section: 'Pacientes' },
-  { to: '/admin/pacientes',       label: 'Listar Pacientes', icon: '👩' },
-  { to: '/admin/pacientes/nova',  label: 'Nova Paciente',    icon: '✚' },
+  { to: '/admin/pacientes',    label: 'Listar Pacientes', icon: '👩' },
 ];
 
 export default function AdminLayout() {

@@ -48,8 +48,9 @@ export default function ReceitaForm({ inicial, onSubmit, onCancel, loading }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!validate()) return;
+    const { ingredientesTexto, ...rest } = form;
     onSubmit({
-      ...form,
+      ...rest,
       calorias:          Number(form.calorias),
       porcaoGramas:      Number(form.porcaoGramas),
       rendimentoPorcoes: Number(form.rendimentoPorcoes),
@@ -57,7 +58,7 @@ export default function ReceitaForm({ inicial, onSubmit, onCancel, loading }) {
       carboidratos:      Number(form.carboidratos),
       gorduras:          Number(form.gorduras),
       tempoPreparo:      Number(form.tempoPreparo),
-      ingredientes: form.ingredientesTexto.split('\n').map((l) => l.trim()).filter(Boolean),
+      ingredientes: ingredientesTexto.split('\n').map((l) => l.trim()).filter(Boolean),
     });
   };
 

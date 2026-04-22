@@ -3,32 +3,41 @@ import { useSearchParams } from 'react-router-dom';
 import ReceitaCard from '../../components/receitas/ReceitaCard';
 import ReceitaModal from '../../components/receitas/ReceitaModal';
 import { LoadingSpinner, EmptyState, ErrorMessage } from '../../components/common/Feedback';
-import { useReceitas } from '../../hooks/useReceitas';
+import receitaService from '../../services/receitaService';
 import { SEGMENTOS, TAGS_DIETETICAS } from '../../utils/helpers';
 import styles from './ReceitasPage.module.css';
 
 export default function ReceitasPage() {
   const [searchParams] = useSearchParams();
-  const { receitas, loading, error } = useReceitas();
+  const [receitas, setReceitas] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const [busca,       setBusca]      = useState('');
   const [segFilt,     setSegFilt]    = useState(searchParams.get('segmento') || 'TODOS');
   const [tagFilt,     setTagFilt]    = useState('TODOS');
   const [selecionada, setSelecionada] = useState(null);
 
   useEffect(() => {
+    setLoading(true);
+    receitaService.listarPublicas()
+      .then(setReceitas)
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false));
+  }, []);
+
+  useEffect(() => {
     const seg = searchParams.get('segmento');
     if (seg) setSegFilt(seg);
   }, [searchParams]);
 
-  const publicas   = useMemo(() => receitas.filter((r) => r.status === 'PUBLICADA'), [receitas]);
-  const filtradas  = useMemo(() => publicas.filter((r) => {
+  const filtradas  = useMemo(() => receitas.filter((r) => {
     const matchSeg   = segFilt === 'TODOS' || r.segmento === segFilt;
     const matchTag   = tagFilt === 'TODOS' || r.tagsDieteticas?.includes(tagFilt);
     const matchBusca = !busca || r.nome.toLowerCase().includes(busca.toLowerCase()) ||
       r.descricao?.toLowerCase().includes(busca.toLowerCase()) ||
       r.ingredientes?.some((i) => i.toLowerCase().includes(busca.toLowerCase()));
     return matchSeg && matchTag && matchBusca;
-  }), [publicas, segFilt, tagFilt, busca]);
+  }), [receitas, segFilt, tagFilt, busca]);
 
   if (loading) return <LoadingSpinner />;
   if (error)   return <ErrorMessage message={error} />;
@@ -45,7 +54,7 @@ export default function ReceitasPage() {
           {busca && <button className={styles.buscaClear} onClick={() => setBusca('')}>✕</button>}
         </div>
         {(busca || segFilt !== 'TODOS' || tagFilt !== 'TODOS') && (
-          <span className={styles.buscaCount}>{filtradas.length} de {publicas.length} receitas</span>
+          <span className={styles.buscaCount}>{filtradas.length} de {receitas.length} receitas</span>
         )}
       </div>
 

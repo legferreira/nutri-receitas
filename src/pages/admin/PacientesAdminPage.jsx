@@ -101,6 +101,7 @@ export default function PacientesAdminPage() {
               onVer={setVisualizando}
               onEditar={setEditando}
               onExcluir={handleExcluir}
+              onNova={() => setEditando({})}
             />
         }
       </div>

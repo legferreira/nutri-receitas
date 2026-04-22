@@ -35,11 +35,11 @@ export default function ReceitaModal({ receita, onClose }) {
 
         <div className={styles.infoRow}>
           {[
-            { val: receita.calorias,          lab: 'kcal' },
-            { val: `${receita.porcaoGramas}g`, lab: 'porção' },
-            { val: `${receita.tempoPreparo}min`, lab: 'preparo' },
-            { val: receita.rendimentoPorcoes,  lab: 'porções' },
-            { val: receita.dificuldade === 'FACIL' ? 'Fácil' : receita.dificuldade === 'MEDIO' ? 'Médio' : 'Difícil', lab: 'dificuldade' },
+            { val: receita.calorias ?? '—',                                           lab: 'kcal' },
+            { val: receita.porcaoGramas      ? `${receita.porcaoGramas}g`      : '—', lab: 'porção' },
+            { val: receita.tempoPreparo      ? `${receita.tempoPreparo}min`     : '—', lab: 'preparo' },
+            { val: receita.rendimentoPorcoes ?? '—',                                   lab: 'porções' },
+            { val: receita.dificuldade === 'FACIL' ? 'Fácil' : receita.dificuldade === 'MEDIO' ? 'Médio' : receita.dificuldade === 'DIFICIL' ? 'Difícil' : '—', lab: 'dificuldade' },
           ].map(({ val, lab }) => (
             <div key={lab} className={styles.infoItem}>
               <span className={styles.infoVal}>{val}</span>
@@ -50,9 +50,9 @@ export default function ReceitaModal({ receita, onClose }) {
 
         <div className={styles.macrosRow}>
           {[
-            { val: `${receita.proteinas}g`,    lab: 'Proteínas' },
-            { val: `${receita.carboidratos}g`, lab: 'Carboidratos' },
-            { val: `${receita.gorduras}g`,     lab: 'Gorduras' },
+            { val: receita.proteinas    != null ? `${receita.proteinas}g`    : '—', lab: 'Proteínas' },
+            { val: receita.carboidratos != null ? `${receita.carboidratos}g` : '—', lab: 'Carboidratos' },
+            { val: receita.gorduras     != null ? `${receita.gorduras}g`     : '—', lab: 'Gorduras' },
           ].map(({ val, lab }) => (
             <div key={lab} className={styles.macro}>
               <span className={styles.macroVal}>{val}</span>

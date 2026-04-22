@@ -1,5 +1,4 @@
 import { useState, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
 import ReceitaTabela from '../../components/receitas/ReceitaTabela';
 import ReceitaForm from '../../components/receitas/ReceitaForm';
 import Modal from '../../components/common/Modal';
