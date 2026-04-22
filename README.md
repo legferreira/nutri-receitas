@@ -2,10 +2,26 @@
 
 Sistema de receitas saudáveis para nutricionista, com área pública e painel administrativo.
 
+## Pré-requisitos
+
+- Node.js 18 ou superior
+- Backend rodando em `http://localhost:8080`
+
+## Como rodar
+
+```bash
+npm install
+npm start
+```
+
+A aplicação abre em: `http://localhost:3000`
+
+---
+
 ## Tecnologias
 
-- React 18
-- React Router DOM v6
+- React 19
+- React Router DOM v7
 - Axios
 - CSS Modules
 
@@ -31,7 +47,6 @@ src/
 ## Instalação e execução
 
 ```bash
-cp .env.example .env
 npm install
 npm start
 ```
